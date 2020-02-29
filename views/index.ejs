@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Url shortener</title>
+</head>
+<body>
+  <h1>Url shrinker</h1>
+  <div class="url-form">
+    <form action="">
+      <input type="url" id="fullUrl" name="fullUrl" placeholder="Enter full-url">
+      <button type="submit" id="submit">Shrink</button>
+    </form>
+  </div>
+
+  <% urls.forEach(item => { %>
+    <div class="url-table">
+      <div class="full-url">
+        full url: <a href="<%- item.full %>"><%- item.full %></a> 
+      </div>
+      <div class="short-url">
+        short url: <a href="/short/<%- item.short %>"><%- item.short %></a>
+      </div>
+      <div class="clicks-url">
+        short url: <%- item.clicks %>
+      </div>
+    </div>
+  <% }); %>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
